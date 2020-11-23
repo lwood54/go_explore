@@ -3,9 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	// var card string = "Ace of Diamonds"
-	card := "Ace of Diamonds" // alternate way of declaring and defining variable and inferring type
-	card = "Five of Spades"   // reassigning card with same type
+	// NOTE: Array is fixed length, Slice can have length changed
+	cards := []string{"Ace of Spades", newCard()}
+	cards = append(cards, "Six of Diamonds") // does not mutate original slice, but returns a new slice
 
-	fmt.Println(card)
+	for i, card := range cards {
+		// iterating through range, providing index and item
+		fmt.Println(i, card)
+	}
+}
+
+// function that returns value of type string
+func newCard() string {
+	return "Five of Clubs"
 }
