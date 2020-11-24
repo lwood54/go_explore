@@ -46,3 +46,11 @@ func (d deck) saveToFile(filename string) error {
 	// conversion occuring in 2nd param, and write permissions of everyone for 3rd param
 	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
 }
+
+func newDeckFromFile(filename string) deck {
+	// bs for byte slice
+	bs, err := ioutil.ReadFile(filename)
+	if err != nil {
+
+	}
+}
