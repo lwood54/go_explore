@@ -1,0 +1,1 @@
+This is a text file that will be read from my hard drive and will be printed to the terminal.
